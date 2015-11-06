@@ -19,8 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-            
-        Dropbox.setupWithAppKey("qhf53b0yrm87kl1")
+        
+        //ENTER APP KEY HERE
+        //Also append the key to the URL types -> URL Schemes -> item 0 property (db-{app_key})
+        Dropbox.setupWithAppKey()
         
         return true
     }
