@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHH-1V-aWE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--SnapperBox-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="snapperbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-2a-Llu">
+                                <rect key="frame" x="153" y="381" width="295" height="72"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.42855001749999999" blue="0.43043517310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="8aE-hn-WEr"/>
+                                    <constraint firstAttribute="width" constant="295" id="ALH-2E-6Qz"/>
+                                    <constraint firstAttribute="width" secondItem="yq7-2a-Llu" secondAttribute="height" multiplier="19:6" constant="67" id="How-je-2NK"/>
+                                    <constraint firstAttribute="width" secondItem="yq7-2a-Llu" secondAttribute="height" multiplier="19:6" constant="67" id="yjb-IO-vmJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                <state key="normal" title="New Snap">
+                                    <color key="titleColor" red="0.98034339999999998" green="1" blue="0.96655103590000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIq-M0-V3X"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7on-WU-US6">
+                                <rect key="frame" x="282" y="490" width="37" height="37"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Emi-hf-XAo"/>
+                                    <constraint firstAttribute="height" constant="37" id="Ixk-T8-9b3"/>
+                                    <constraint firstAttribute="width" secondItem="7on-WU-US6" secondAttribute="height" multiplier="1:1" id="vB5-xO-uoi"/>
+                                </constraints>
+                                <color key="color" red="1" green="0.36530779209999997" blue="0.32320303080000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{IMAGE} Uploaded!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V3-W1-KpM">
+                                <rect key="frame" x="226" y="543" width="148" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.36530779209999997" blue="0.32320303080000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3V3-W1-KpM" secondAttribute="bottom" constant="36" id="FCS-KS-6Ni"/>
+                            <constraint firstItem="yq7-2a-Llu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bLW-iD-UmY"/>
+                            <constraint firstItem="3V3-W1-KpM" firstAttribute="top" secondItem="7on-WU-US6" secondAttribute="bottom" constant="16" id="veY-AG-sxe"/>
+                            <constraint firstItem="7on-WU-US6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wCL-79-4mP"/>
+                            <constraint firstItem="3V3-W1-KpM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yOS-N3-Ao1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SnapperBox" id="JGD-WF-UOq"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="7on-WU-US6" id="oYK-3j-CvJ"/>
+                        <outlet property="linkAccountBtn" destination="yq7-2a-Llu" id="4gh-X8-Idn"/>
+                        <outlet property="uploadStatusLabel" destination="3V3-W1-KpM" id="8HJ-TO-5bq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="1017"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ahp-a3-bR0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QHH-1V-aWE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nCY-KO-XDn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.36530779214350828" blue="0.32320303078292711" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="pap-ip-gzn">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gFa-dH-T4n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUG-Dy-lxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224" y="1017"/>
+        </scene>
+    </scenes>
+</document>
